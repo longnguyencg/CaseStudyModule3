@@ -1,0 +1,19 @@
+<table class="table" style="text-align: center">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col" style="text-align: center">Danh sách đọc</th>
+    <th scope="col">Status</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books; index as i">
+    <td>{{ book.name}}</td>
+    <td>
+      <button class="btn btn-secondary" (click)="onSubmit(i)"> Đọc lại </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<button class="btn btn-success" routerLink="">Quay về trang chủ</button>
+

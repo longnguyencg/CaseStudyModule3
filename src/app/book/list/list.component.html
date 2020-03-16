@@ -1,0 +1,22 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit(addForm.value)" style="margin-bottom: 10px">
+  <input type="text" formControlName="name" style="margin-right: 25px">
+  <button class="btn btn-primary" type="submit">Thêm</button>
+</form>
+<table class="table" style="text-align: center">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col" style="text-align: center">Danh sách đọc</th>
+    <th>Status</th>
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let book of books; index as i">
+    <td>{{ book.name}}</td>
+    <td>
+      <button class="btn btn-secondary" (click)="updateStatusBook(i)"> Đã đọc </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<button class="btn btn-success" routerLink="">Quay về trang chủ</button>
+
