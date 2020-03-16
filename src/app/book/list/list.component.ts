@@ -29,7 +29,7 @@ export class ListComponent implements OnInit {
     this.bookService.updateBook(book).subscribe(data => {
       this.books.splice(index, 1);
     });
-    this.router.navigate(['list']);
+    this.router.navigate(['/list']);
   }
   onSubmit(value) {
     let book: IBook = {
